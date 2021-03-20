@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BancoProwayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="assistido">
+    <Key>
+      <PropertyRef Name="id_assistido" />
+    </Key>
+    <Property Name="id_assistido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="filme" Type="Int32" />
+    <Property Name="serie" Type="Int32" />
+    <Property Name="dataehora" Type="DateTime" Precision="0" />
+    <Property Name="usuario" Type="Int32" />
+    <NavigationProperty Name="filme1" Relationship="Self.FK_assistidos_filmes" FromRole="assistidos" ToRole="filmes" />
+    <NavigationProperty Name="series" Relationship="Self.FK_assistidos_series" FromRole="assistidos" ToRole="series" />
+    <NavigationProperty Name="usuario1" Relationship="Self.FK_assistidos_usuarios" FromRole="assistidos" ToRole="usuarios" />
+  </EntityType>
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="id_categoria" />
+    </Key>
+    <Property Name="id_categoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="filmes" Relationship="Self.FK_filmes_categorias" FromRole="categorias" ToRole="filmes" />
+    <NavigationProperty Name="series" Relationship="Self.FK_series_categorias" FromRole="categorias" ToRole="series" />
+  </EntityType>
+  <EntityType Name="episodio">
+    <Key>
+      <PropertyRef Name="id_episodio" />
+    </Key>
+    <Property Name="id_episodio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sinopse" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="temporada" Type="Int32" />
+    <Property Name="sequencial" Type="Int32" />
+    <NavigationProperty Name="temporada1" Relationship="Self.FK_episodios_temporadas" FromRole="episodios" ToRole="temporadas" />
+  </EntityType>
+  <EntityType Name="filme">
+    <Key>
+      <PropertyRef Name="id_filme" />
+    </Key>
+    <Property Name="id_filme" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ano" Type="Int32" />
+    <Property Name="sinopse" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="categoria" Type="Int32" />
+    <NavigationProperty Name="assistidos" Relationship="Self.FK_assistidos_filmes" FromRole="filmes" ToRole="assistidos" />
+    <NavigationProperty Name="categoria1" Relationship="Self.FK_filmes_categorias" FromRole="filmes" ToRole="categorias" />
+  </EntityType>
+  <EntityType Name="perfi">
+    <Key>
+      <PropertyRef Name="id_perfil" />
+    </Key>
+    <Property Name="id_perfil" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="usuarios" Relationship="Self.FK_usuarios_perfis" FromRole="perfis" ToRole="usuarios" />
+  </EntityType>
+  <EntityType Name="series">
+    <Key>
+      <PropertyRef Name="id_serie" />
+    </Key>
+    <Property Name="id_serie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ano" Type="Int32" />
+    <Property Name="sinopse" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="categoria" Type="Int32" />
+    <NavigationProperty Name="assistidos" Relationship="Self.FK_assistidos_series" FromRole="series" ToRole="assistidos" />
+    <NavigationProperty Name="categoria1" Relationship="Self.FK_series_categorias" FromRole="series" ToRole="categorias" />
+    <NavigationProperty Name="temporadas" Relationship="Self.FK_temporadas_series" FromRole="series" ToRole="temporadas" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="temporada">
+    <Key>
+      <PropertyRef Name="id_temporada" />
+    </Key>
+    <Property Name="id_temporada" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="serie" Type="Int32" />
+    <Property Name="sequencial" Type="Int32" />
+    <NavigationProperty Name="episodios" Relationship="Self.FK_episodios_temporadas" FromRole="temporadas" ToRole="episodios" />
+    <NavigationProperty Name="series" Relationship="Self.FK_temporadas_series" FromRole="temporadas" ToRole="series" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="senha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="perfil" Type="Int32" />
+    <NavigationProperty Name="assistidos" Relationship="Self.FK_assistidos_usuarios" FromRole="usuarios" ToRole="assistidos" />
+    <NavigationProperty Name="perfi" Relationship="Self.FK_usuarios_perfis" FromRole="usuarios" ToRole="perfis" />
+  </EntityType>
+  <Association Name="FK_assistidos_filmes">
+    <End Role="filmes" Type="Self.filme" Multiplicity="0..1" />
+    <End Role="assistidos" Type="Self.assistido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="filmes">
+        <PropertyRef Name="id_filme" />
+      </Principal>
+      <Dependent Role="assistidos">
+        <PropertyRef Name="filme" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_assistidos_series">
+    <End Role="series" Type="Self.series" Multiplicity="0..1" />
+    <End Role="assistidos" Type="Self.assistido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="series">
+        <PropertyRef Name="id_serie" />
+      </Principal>
+      <Dependent Role="assistidos">
+        <PropertyRef Name="serie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_assistidos_usuarios">
+    <End Role="usuarios" Type="Self.usuario" Multiplicity="0..1" />
+    <End Role="assistidos" Type="Self.assistido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="assistidos">
+        <PropertyRef Name="usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_filmes_categorias">
+    <End Role="categorias" Type="Self.categoria" Multiplicity="0..1" />
+    <End Role="filmes" Type="Self.filme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categorias">
+        <PropertyRef Name="id_categoria" />
+      </Principal>
+      <Dependent Role="filmes">
+        <PropertyRef Name="categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_series_categorias">
+    <End Role="categorias" Type="Self.categoria" Multiplicity="0..1" />
+    <End Role="series" Type="Self.series" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categorias">
+        <PropertyRef Name="id_categoria" />
+      </Principal>
+      <Dependent Role="series">
+        <PropertyRef Name="categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_episodios_temporadas">
+    <End Role="temporadas" Type="Self.temporada" Multiplicity="0..1" />
+    <End Role="episodios" Type="Self.episodio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="temporadas">
+        <PropertyRef Name="id_temporada" />
+      </Principal>
+      <Dependent Role="episodios">
+        <PropertyRef Name="temporada" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_usuarios_perfis">
+    <End Role="perfis" Type="Self.perfi" Multiplicity="0..1" />
+    <End Role="usuarios" Type="Self.usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="perfis">
+        <PropertyRef Name="id_perfil" />
+      </Principal>
+      <Dependent Role="usuarios">
+        <PropertyRef Name="perfil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_temporadas_series">
+    <End Role="series" Type="Self.series" Multiplicity="0..1" />
+    <End Role="temporadas" Type="Self.temporada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="series">
+        <PropertyRef Name="id_serie" />
+      </Principal>
+      <Dependent Role="temporadas">
+        <PropertyRef Name="serie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BancoProwayEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="assistidos" EntityType="Self.assistido" />
+    <EntitySet Name="categorias" EntityType="Self.categoria" />
+    <EntitySet Name="episodios" EntityType="Self.episodio" />
+    <EntitySet Name="filmes" EntityType="Self.filme" />
+    <EntitySet Name="perfis" EntityType="Self.perfi" />
+    <EntitySet Name="series" EntityType="Self.series" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="temporadas" EntityType="Self.temporada" />
+    <EntitySet Name="usuarios" EntityType="Self.usuario" />
+    <AssociationSet Name="FK_assistidos_filmes" Association="Self.FK_assistidos_filmes">
+      <End Role="filmes" EntitySet="filmes" />
+      <End Role="assistidos" EntitySet="assistidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_assistidos_series" Association="Self.FK_assistidos_series">
+      <End Role="series" EntitySet="series" />
+      <End Role="assistidos" EntitySet="assistidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_assistidos_usuarios" Association="Self.FK_assistidos_usuarios">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="assistidos" EntitySet="assistidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_filmes_categorias" Association="Self.FK_filmes_categorias">
+      <End Role="categorias" EntitySet="categorias" />
+      <End Role="filmes" EntitySet="filmes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_series_categorias" Association="Self.FK_series_categorias">
+      <End Role="categorias" EntitySet="categorias" />
+      <End Role="series" EntitySet="series" />
+    </AssociationSet>
+    <AssociationSet Name="FK_episodios_temporadas" Association="Self.FK_episodios_temporadas">
+      <End Role="temporadas" EntitySet="temporadas" />
+      <End Role="episodios" EntitySet="episodios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_usuarios_perfis" Association="Self.FK_usuarios_perfis">
+      <End Role="perfis" EntitySet="perfis" />
+      <End Role="usuarios" EntitySet="usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_temporadas_series" Association="Self.FK_temporadas_series">
+      <End Role="series" EntitySet="series" />
+      <End Role="temporadas" EntitySet="temporadas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
