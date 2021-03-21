@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BancoProwayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="BancoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Assistido">
     <Key>
       <PropertyRef Name="IdAssistido" />
@@ -195,7 +195,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="BancoProwayEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="BancoEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Assistido" EntityType="Self.Assistido" />
     <EntitySet Name="Categoria" EntityType="Self.Categoria" />
     <EntitySet Name="Episodio" EntityType="Self.Episodio" />

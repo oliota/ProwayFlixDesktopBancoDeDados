@@ -58,26 +58,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Banco.Context.cs">
+    <Compile Include="Assistido.cs">
+      <DependentUpon>BancoProway.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BancoProway.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Banco.Context.tt</DependentUpon>
+      <DependentUpon>BancoProway.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Banco.cs">
+    <Compile Include="BancoProway.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Banco.tt</DependentUpon>
+      <DependentUpon>BancoProway.tt</DependentUpon>
     </Compile>
-    <Compile Include="Banco.Designer.cs">
+    <Compile Include="BancoProway.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Banco.edmx</DependentUpon>
+      <DependentUpon>BancoProway.edmx</DependentUpon>
     </Compile>
-    <Compile Include="forms\paginas\ClientesForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Business\Utils.cs" />
+    <Compile Include="Categoria.cs">
+      <DependentUpon>BancoProway.tt</DependentUpon>
     </Compile>
-    <Compile Include="forms\paginas\ClientesForm.Designer.cs">
-      <DependentUpon>ClientesForm.cs</DependentUpon>
+    <Compile Include="Episodio.cs">
+      <DependentUpon>BancoProway.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Filme.cs">
+      <DependentUpon>BancoProway.tt</DependentUpon>
     </Compile>
     <Compile Include="forms\paginas\FilmesForm.cs">
       <SubType>Form</SubType>
@@ -97,6 +104,12 @@
     <Compile Include="forms\paginas\SeriesForm.Designer.cs">
       <DependentUpon>SeriesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\paginas\UsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\paginas\UsuarioForm.Designer.cs">
+      <DependentUpon>UsuarioForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\PrincipalForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,12 +122,32 @@
     <Compile Include="forms\paginas\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\SegurancaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\SegurancaForm.Designer.cs">
+      <DependentUpon>SegurancaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\utils\DialogCenteringService.cs" />
+    <Compile Include="Model\Interface\IRepositorio.cs" />
+    <Compile Include="Model\Repositorio\Repositorios.cs" />
+    <Compile Include="Perfil.cs">
+      <DependentUpon>BancoProway.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="forms\paginas\ClientesForm.resx">
-      <DependentUpon>ClientesForm.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Serie.cs">
+      <DependentUpon>BancoProway.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>BancoProway.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Temporada.cs">
+      <DependentUpon>BancoProway.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>BancoProway.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="forms\paginas\FilmesForm.resx">
       <DependentUpon>FilmesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,8 +160,14 @@
     <EmbeddedResource Include="forms\paginas\SeriesForm.resx">
       <DependentUpon>SeriesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\paginas\UsuarioForm.resx">
+      <DependentUpon>UsuarioForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\PrincipalForm.resx">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\SegurancaForm.resx">
+      <DependentUpon>SegurancaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,12 +178,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="Banco.edmx">
+    <EntityDeploy Include="BancoProway.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Banco.Designer.cs</LastGenOutput>
+      <LastGenOutput>BancoProway.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Banco.edmx.diagram">
-      <DependentUpon>Banco.edmx</DependentUpon>
+    <None Include="BancoProway.edmx.diagram">
+      <DependentUpon>BancoProway.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -164,15 +203,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Banco.Context.tt">
+    <Content Include="BancoProway.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Banco.edmx</DependentUpon>
-      <LastGenOutput>Banco.Context.cs</LastGenOutput>
+      <DependentUpon>BancoProway.edmx</DependentUpon>
+      <LastGenOutput>BancoProway.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Banco.tt">
+    <Content Include="BancoProway.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Banco.edmx</DependentUpon>
-      <LastGenOutput>Banco.cs</LastGenOutput>
+      <DependentUpon>BancoProway.edmx</DependentUpon>
+      <LastGenOutput>BancoProway.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

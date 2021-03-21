@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="BancoProwayModelStoreContainer" CdmEntityContainer="BancoProwayEntities">
+  <EntityContainerMapping StorageEntityContainer="BancoModelStoreContainer" CdmEntityContainer="BancoEntities">
     <EntitySetMapping Name="Assistido">
-      <EntityTypeMapping TypeName="BancoProwayModel.Assistido">
+      <EntityTypeMapping TypeName="BancoModel.Assistido">
         <MappingFragment StoreEntitySet="Assistido">
           <ScalarProperty Name="IdAssistido" ColumnName="IdAssistido" />
           <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
@@ -13,7 +13,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Categoria">
-      <EntityTypeMapping TypeName="BancoProwayModel.Categoria">
+      <EntityTypeMapping TypeName="BancoModel.Categoria">
         <MappingFragment StoreEntitySet="Categoria">
           <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
@@ -21,7 +21,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Episodio">
-      <EntityTypeMapping TypeName="BancoProwayModel.Episodio">
+      <EntityTypeMapping TypeName="BancoModel.Episodio">
         <MappingFragment StoreEntitySet="Episodio">
           <ScalarProperty Name="IdEpisodio" ColumnName="IdEpisodio" />
           <ScalarProperty Name="TemporadaId" ColumnName="TemporadaId" />
@@ -32,7 +32,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Filme">
-      <EntityTypeMapping TypeName="BancoProwayModel.Filme">
+      <EntityTypeMapping TypeName="BancoModel.Filme">
         <MappingFragment StoreEntitySet="Filme">
           <ScalarProperty Name="IdFilme" ColumnName="IdFilme" />
           <ScalarProperty Name="CategoriaId" ColumnName="CategoriaId" />
@@ -43,7 +43,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Perfil">
-      <EntityTypeMapping TypeName="BancoProwayModel.Perfil">
+      <EntityTypeMapping TypeName="BancoModel.Perfil">
         <MappingFragment StoreEntitySet="Perfil">
           <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
@@ -51,7 +51,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Serie">
-      <EntityTypeMapping TypeName="BancoProwayModel.Serie">
+      <EntityTypeMapping TypeName="BancoModel.Serie">
         <MappingFragment StoreEntitySet="Serie">
           <ScalarProperty Name="IdSerie" ColumnName="IdSerie" />
           <ScalarProperty Name="CategoriaId" ColumnName="CategoriaId" />
@@ -62,7 +62,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="BancoProwayModel.sysdiagrams">
+      <EntityTypeMapping TypeName="BancoModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -73,7 +73,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Temporada">
-      <EntityTypeMapping TypeName="BancoProwayModel.Temporada">
+      <EntityTypeMapping TypeName="BancoModel.Temporada">
         <MappingFragment StoreEntitySet="Temporada">
           <ScalarProperty Name="IdTemporada" ColumnName="IdTemporada" />
           <ScalarProperty Name="SerieId" ColumnName="SerieId" />
@@ -82,7 +82,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Usuario">
-      <EntityTypeMapping TypeName="BancoProwayModel.Usuario">
+      <EntityTypeMapping TypeName="BancoModel.Usuario">
         <MappingFragment StoreEntitySet="Usuario">
           <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
           <ScalarProperty Name="PerfilId" ColumnName="PerfilId" />

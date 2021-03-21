@@ -18,3 +18,15 @@ D:\CS\ProjetoProway\ProjetoProway\bin\Debug\EntityFramework.SqlServer.dll
 D:\CS\ProjetoProway\ProjetoProway\bin\Debug\EntityFramework.xml
 D:\CS\ProjetoProway\ProjetoProway\bin\Debug\EntityFramework.SqlServer.xml
 D:\CS\ProjetoProway\ProjetoProway\obj\Debug\UI.csproj.CopyComplete
+D:\CS\PROJETO_PROWAY_DESKTOP\projeto\ProjetoProway\obj\Debug\UI.csprojAssemblyReference.cache
+D:\CS\PROJETO_PROWAY_DESKTOP\projeto\ProjetoProway\obj\Debug\ProjetoProway.forms.ClientesForm.resources
+D:\CS\PROJETO_PROWAY_DESKTOP\projeto\ProjetoProway\obj\Debug\ProjetoProway.forms.paginas.FilmesForm.resources
+D:\CS\PROJETO_PROWAY_DESKTOP\projeto\ProjetoProway\obj\Debug\ProjetoProway.HomeForm.resources
+D:\CS\PROJETO_PROWAY_DESKTOP\projeto\ProjetoProway\obj\Debug\ProjetoProway.forms.paginas.LoginForm.resources
+D:\CS\PROJETO_PROWAY_DESKTOP\projeto\ProjetoProway\obj\Debug\ProjetoProway.forms.paginas.SeriesForm.resources
+D:\CS\PROJETO_PROWAY_DESKTOP\projeto\ProjetoProway\obj\Debug\ProjetoProway.PrincipalForm.resources
+D:\CS\PROJETO_PROWAY_DESKTOP\projeto\ProjetoProway\obj\Debug\ProjetoProway.Properties.Resources.resources
+D:\CS\PROJETO_PROWAY_DESKTOP\projeto\ProjetoProway\obj\Debug\UI.csproj.GenerateResource.cache
+D:\CS\PROJETO_PROWAY_DESKTOP\projeto\ProjetoProway\obj\Debug\UI.csproj.CoreCompileInputs.cache
+D:\CS\PROJETO_PROWAY_DESKTOP\projeto\ProjetoProway\obj\Debug\ProjetoProway.exe
+D:\CS\PROJETO_PROWAY_DESKTOP\projeto\ProjetoProway\obj\Debug\ProjetoProway.pdb

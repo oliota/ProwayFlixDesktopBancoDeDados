@@ -1,6 +1,7 @@
 ﻿using ProjetoProway.forms;
 using ProjetoProway.forms.paginas;
 using ProjetoProway.forms.utils;
+using ProjetoProway.Model.Repositorio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,7 @@ namespace ProjetoProway
         {
             VisibilidadeMenu(false);
             SubirJanela(new LoginForm());
+
 
             //var banco = new BancoProwayEntities(); 
             //var query = from st in banco.perfis
@@ -56,10 +58,7 @@ namespace ProjetoProway
             JanelaFilha(new HomeForm()); 
         }
 
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            JanelaFilha(new ClientesForm());  
-        }
+      
 
         private void filmesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -100,7 +99,7 @@ namespace ProjetoProway
         }
 
         private void PrincipalForm_FormClosing(object sender, FormClosingEventArgs e)
-        { 
+        {
             DialogResult dg;
             using (DialogCenteringService centeringService = new DialogCenteringService(this)) // center message box
             {
@@ -114,7 +113,32 @@ namespace ProjetoProway
             {
                 e.Cancel = true;
             }
+            else
+            {
+                SegurancaForm f = Application.OpenForms["SegurancaForm"] as SegurancaForm;
 
+                f.Close();
+            }
+
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+
+            SegurancaForm f = Application.OpenForms["SegurancaForm"] as SegurancaForm;
+           
+            f.Show();
+             
+
+
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            JanelaFilha(new UsuarioForm());
         }
     }
 }
