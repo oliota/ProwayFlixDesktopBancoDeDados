@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9c465435f482414ea0516467e52a261b" Name="Diagram1">
+        <EntityTypeShape EntityType="BancoModel.Assistido" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.Categoria" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.Episodio" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.Filme" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.Perfil" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.Serie" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.Temporada" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.Usuario" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="BancoModel.FK__Assistido__Filme__489AC854" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoModel.FK__Assistido__Serie__498EEC8D" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoModel.FK__Assistido__Usuar__47A6A41B" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoModel.FK__Filme__Categoria__3C34F16F" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoModel.FK__Serie__Categoria__3F115E1A" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoModel.FK__Episodio__Tempor__44CA3770" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoModel.FK__Usuario__PerfilI__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoModel.FK__Temporada__Serie__41EDCAC5" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

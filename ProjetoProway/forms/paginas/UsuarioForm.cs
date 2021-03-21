@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjetoProway.forms
+namespace ProjetoProway.forms.paginas
 {
-    public partial class ClientesForm : Form
+    public partial class UsuarioForm : Form
     {
-        public ClientesForm()
+        public UsuarioForm()
         {
             InitializeComponent();
         }

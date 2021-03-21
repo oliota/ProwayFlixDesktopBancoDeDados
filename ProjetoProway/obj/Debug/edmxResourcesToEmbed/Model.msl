@@ -1,68 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="BancoProwayModelStoreContainer" CdmEntityContainer="BancoProwayEntities">
-    <EntitySetMapping Name="assistidos">
-      <EntityTypeMapping TypeName="BancoProwayModel.assistido">
-        <MappingFragment StoreEntitySet="assistidos">
-          <ScalarProperty Name="id_assistido" ColumnName="id_assistido" />
-          <ScalarProperty Name="filme" ColumnName="filme" />
-          <ScalarProperty Name="serie" ColumnName="serie" />
-          <ScalarProperty Name="dataehora" ColumnName="dataehora" />
-          <ScalarProperty Name="usuario" ColumnName="usuario" />
+    <EntitySetMapping Name="Assistido">
+      <EntityTypeMapping TypeName="BancoProwayModel.Assistido">
+        <MappingFragment StoreEntitySet="Assistido">
+          <ScalarProperty Name="IdAssistido" ColumnName="IdAssistido" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="FilmeId" ColumnName="FilmeId" />
+          <ScalarProperty Name="SerieId" ColumnName="SerieId" />
+          <ScalarProperty Name="Em" ColumnName="Em" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="categorias">
-      <EntityTypeMapping TypeName="BancoProwayModel.categoria">
-        <MappingFragment StoreEntitySet="categorias">
-          <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
-          <ScalarProperty Name="nome" ColumnName="nome" />
+    <EntitySetMapping Name="Categoria">
+      <EntityTypeMapping TypeName="BancoProwayModel.Categoria">
+        <MappingFragment StoreEntitySet="Categoria">
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="episodios">
-      <EntityTypeMapping TypeName="BancoProwayModel.episodio">
-        <MappingFragment StoreEntitySet="episodios">
-          <ScalarProperty Name="id_episodio" ColumnName="id_episodio" />
-          <ScalarProperty Name="nome" ColumnName="nome" />
-          <ScalarProperty Name="sinopse" ColumnName="sinopse" />
-          <ScalarProperty Name="temporada" ColumnName="temporada" />
-          <ScalarProperty Name="sequencial" ColumnName="sequencial" />
+    <EntitySetMapping Name="Episodio">
+      <EntityTypeMapping TypeName="BancoProwayModel.Episodio">
+        <MappingFragment StoreEntitySet="Episodio">
+          <ScalarProperty Name="IdEpisodio" ColumnName="IdEpisodio" />
+          <ScalarProperty Name="TemporadaId" ColumnName="TemporadaId" />
+          <ScalarProperty Name="Sequencial" ColumnName="Sequencial" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Sinopse" ColumnName="Sinopse" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="filmes">
-      <EntityTypeMapping TypeName="BancoProwayModel.filme">
-        <MappingFragment StoreEntitySet="filmes">
-          <ScalarProperty Name="id_filme" ColumnName="id_filme" />
-          <ScalarProperty Name="nome" ColumnName="nome" />
-          <ScalarProperty Name="ano" ColumnName="ano" />
-          <ScalarProperty Name="sinopse" ColumnName="sinopse" />
-          <ScalarProperty Name="categoria" ColumnName="categoria" />
+    <EntitySetMapping Name="Filme">
+      <EntityTypeMapping TypeName="BancoProwayModel.Filme">
+        <MappingFragment StoreEntitySet="Filme">
+          <ScalarProperty Name="IdFilme" ColumnName="IdFilme" />
+          <ScalarProperty Name="CategoriaId" ColumnName="CategoriaId" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Sinopse" ColumnName="Sinopse" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="perfis">
-      <EntityTypeMapping TypeName="BancoProwayModel.perfi">
-        <MappingFragment StoreEntitySet="perfis">
-          <ScalarProperty Name="id_perfil" ColumnName="id_perfil" />
-          <ScalarProperty Name="nome" ColumnName="nome" />
+    <EntitySetMapping Name="Perfil">
+      <EntityTypeMapping TypeName="BancoProwayModel.Perfil">
+        <MappingFragment StoreEntitySet="Perfil">
+          <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="series">
-      <EntityTypeMapping TypeName="BancoProwayModel.series">
-        <MappingFragment StoreEntitySet="series">
-          <ScalarProperty Name="id_serie" ColumnName="id_serie" />
-          <ScalarProperty Name="nome" ColumnName="nome" />
-          <ScalarProperty Name="ano" ColumnName="ano" />
-          <ScalarProperty Name="sinopse" ColumnName="sinopse" />
-          <ScalarProperty Name="categoria" ColumnName="categoria" />
+    <EntitySetMapping Name="Serie">
+      <EntityTypeMapping TypeName="BancoProwayModel.Serie">
+        <MappingFragment StoreEntitySet="Serie">
+          <ScalarProperty Name="IdSerie" ColumnName="IdSerie" />
+          <ScalarProperty Name="CategoriaId" ColumnName="CategoriaId" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Sinopse" ColumnName="Sinopse" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="BancoProwayModel.sysdiagram">
+      <EntityTypeMapping TypeName="BancoProwayModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -72,24 +72,24 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="temporadas">
-      <EntityTypeMapping TypeName="BancoProwayModel.temporada">
-        <MappingFragment StoreEntitySet="temporadas">
-          <ScalarProperty Name="id_temporada" ColumnName="id_temporada" />
-          <ScalarProperty Name="serie" ColumnName="serie" />
-          <ScalarProperty Name="sequencial" ColumnName="sequencial" />
+    <EntitySetMapping Name="Temporada">
+      <EntityTypeMapping TypeName="BancoProwayModel.Temporada">
+        <MappingFragment StoreEntitySet="Temporada">
+          <ScalarProperty Name="IdTemporada" ColumnName="IdTemporada" />
+          <ScalarProperty Name="SerieId" ColumnName="SerieId" />
+          <ScalarProperty Name="Sequencial" ColumnName="Sequencial" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="usuarios">
-      <EntityTypeMapping TypeName="BancoProwayModel.usuario">
-        <MappingFragment StoreEntitySet="usuarios">
-          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
-          <ScalarProperty Name="nome" ColumnName="nome" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="login" ColumnName="login" />
-          <ScalarProperty Name="senha" ColumnName="senha" />
-          <ScalarProperty Name="perfil" ColumnName="perfil" />
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="BancoProwayModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="PerfilId" ColumnName="PerfilId" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Logon" ColumnName="Logon" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
